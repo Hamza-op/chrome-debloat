@@ -71,17 +71,20 @@ fn apply_balanced_presets() -> Result<()> {
     let mut skipped = Vec::new();
 
     for browser in Browser::all() {
+        let preset = manifest.balanced_preset(browser);
         let mut state = BrowserState::new(
             browser,
             detection::detect(browser),
             policy::read(browser),
-            manifest.balanced_preset(browser),
+            preset.clone(),
         );
 
         if !state.detected() {
             skipped.push(format!("{}: not installed", browser.name()));
             continue;
         }
+
+        state.stage_preset(preset);
 
         match state.apply_policy_changes() {
             Ok(ApplyResult::Applied) => applied.push(browser.name()),

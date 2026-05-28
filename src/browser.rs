@@ -355,6 +355,19 @@ impl BrowserState {
         self.clear_awaiting_policy_change();
     }
 
+    pub fn stage_preset(&mut self, preset: PolicySet) -> bool {
+        let Some(policy) = &self.policy else {
+            return false;
+        };
+
+        if self.edits.current(&policy.policies) == &preset {
+            return false;
+        }
+
+        self.push_edit(preset);
+        true
+    }
+
     pub fn stage_policy_removal_at(&mut self, cursor: &RowId) -> bool {
         self.edit_current(|_, _, current| policy_tree::remove_at(current, cursor))
     }

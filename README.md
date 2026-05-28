@@ -12,7 +12,8 @@ Instantly disable telemetry, promotional clutter, and browser bloat while mainta
 - Disable telemetry and usage reporting
 - Disable GenAI features
 - Disable bloatware, promotional features and suggested content
-- Disable vendor specific Sign-In and Sync
+- Optional vendor specific Sign-In and Sync disabling
+- Enable Chrome Memory Saver and tab freezing for lower RAM use
 - Tighten Site-Shield settings (disable location detection, notifications, etc)
 - Install content-blocking extensions:
   - **Brave**

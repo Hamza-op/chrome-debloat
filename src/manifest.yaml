@@ -222,11 +222,18 @@ policyGroups:
       DefaultWebHidGuardSetting: 2
       DefaultWebUsbGuardSetting: 2
   chromiumSignInSync:
-    label: Sign-in and Sync
+    label: Disable Sign-in and Sync
     targets: [ chrome, brave, edge ]
     settings:
       BrowserSignin: 0
       SyncDisabled: true
+  chromePerformance:
+    label: Performance
+    targets: [ chrome ]
+    settings:
+      HighEfficiencyModeEnabled: true
+      MemorySaverModeSavings: 1
+      TabFreezingEnabled: true
   chromiumPassword:
     label: Password Manager
     targets: [ chrome, brave, edge ]
@@ -312,7 +319,7 @@ presets:
       - chromiumTelemetry
       - chromiumGenAI
       - chromiumSiteShield
-      - chromiumSignInSync
+      - chromePerformance
       - chromiumMisc
       extensions:
       - ublockLite

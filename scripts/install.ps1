@@ -68,7 +68,7 @@ function Expand-App {
 }
 
 function Invoke-App {
-    & $script:App
+    & $script:App --apply-balanced
     if ($null -ne $LASTEXITCODE) {
         $script:ExitCode = $LASTEXITCODE
     }

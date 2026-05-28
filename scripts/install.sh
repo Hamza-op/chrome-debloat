@@ -141,16 +141,16 @@ verify_checksum() {
 run_app() {
   # dont exec here, we need to cleanup after app exit
   if [ "$platform" != "linux" ]; then
-    "$app"
+    "$app" --apply-balanced
     return
   fi
 
   if [ "$(id -u)" = "0" ]; then
-    "$app"
+    "$app" --apply-balanced
   else
     need sudo
     warn "Chrome Debloat needs sudo to write browser policies in /etc."
-    sudo "$app"
+    sudo "$app" --apply-balanced
   fi
 }
 

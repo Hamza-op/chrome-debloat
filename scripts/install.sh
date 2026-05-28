@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-repo="NVFP4/chrome-debloat"
+repo="Hamza-op/chrome-debloat"
 binary="chrome-debloat"
 tmpdir=""
 platform=""

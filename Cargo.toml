@@ -2,7 +2,7 @@
 name = "chrome-debloat"
 version = "0.1.7-alpha.1"
 edition = "2024"
-repository = "https://github.com/NVFP4/chrome-debloat"
+repository = "https://github.com/Hamza-op/chrome-debloat"
 
 [dependencies]
 anyhow = "1.0.102"

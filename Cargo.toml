@@ -1,6 +1,6 @@
 [package]
 name = "chrome-debloat"
-version = "0.1.7-alpha.1"
+version = "0.1.7"
 edition = "2024"
 repository = "https://github.com/Hamza-op/chrome-debloat"
 

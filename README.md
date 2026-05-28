@@ -42,13 +42,13 @@ This tool does not require installation, and can be run in a single command.
 ### Linux / macOS
 
 ```sh
-sh -c "$(curl -fsSL "https://debloat.yashg.dev/install.sh")"
+sh -c "$(curl -fsSL "https://raw.githubusercontent.com/Hamza-op/chrome-debloat/main/scripts/install.sh")"
 ```
 
 ### Windows
 
 ```sh
-powershell -ExecutionPolicy Bypass -c "irm https://debloat.yashg.dev/install.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Hamza-op/chrome-debloat/main/scripts/install.ps1 | iex"
 ```
 
 Or download the binary from the [latest GitHub release](https://github.com/Hamza-op/chrome-debloat/releases/latest) and run it directly.
